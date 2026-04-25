@@ -1,0 +1,26 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:U2Graficacion2D"
+             x:Class="U2Graficacion2D.Tabs.TabFuentes"
+             Background="#3D3D3D"
+             Foreground="#FFFFFF">
+    <DockPanel LastChildFill="True">
+        <Border DockPanel.Dock="Bottom" Height="120" Background="#2D2D2D" BorderBrush="#555555" BorderThickness="0,1,0,0">
+            <StackPanel Orientation="Vertical" Margin="15" Spacing="8">
+                <StackPanel Orientation="Horizontal" Spacing="10">
+                    <TextBlock Text="Texto:" VerticalAlignment="Center" Width="50" Foreground="#FFFFFF"/>
+                    <TextBox Name="TxtTexto" Text="¡Graficación!" Width="250" Background="#4D4D4D" Foreground="#FFFFFF" 
+                            PropertyChanged="TextBox_PropertyChanged"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Spacing="10">
+                    <TextBlock Text="Tamaño:" VerticalAlignment="Center" Width="50" Foreground="#FFFFFF"/>
+                    <Slider Name="SliderTamano" Minimum="10" Maximum="60" Value="24" Width="200" PropertyChanged="Slider_PropertyChanged"/>
+                    <TextBlock Text="{Binding #SliderTamano.Value, StringFormat={}{0:F0}}" VerticalAlignment="Center" Foreground="#FFFFFF"/>
+                </StackPanel>
+                <TextBlock Name="LblInfo" FontFamily="Consolas" FontSize="10" Foreground="#CCCCCC"/>
+            </StackPanel>
+        </Border>
+        
+        <local:DrawingCanvas Name="MainCanvas" Background="#1a1a1a" Paint="OnPaint"/>
+    </DockPanel>
+</UserControl>

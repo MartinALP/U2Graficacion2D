@@ -1,0 +1,28 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:U2Graficacion2D"
+             x:Class="U2Graficacion2D.Tabs.TabTraslacion"
+             Background="#3D3D3D"
+             Foreground="#FFFFFF">
+    <DockPanel LastChildFill="True">
+        <Border DockPanel.Dock="Bottom" Height="120" Background="#2D2D2D" BorderBrush="#555555" BorderThickness="0,1,0,0">
+            <StackPanel Orientation="Vertical" Margin="15" Spacing="8">
+                <StackPanel Orientation="Horizontal" Spacing="10">
+                    <TextBlock Text="tx:" VerticalAlignment="Center" Width="30" Foreground="#FFFFFF"/>
+                    <Slider Name="SliderTx" Minimum="-300" Maximum="300" Value="150" Width="250" Foreground="#00D4FF"
+                            PropertyChanged="Slider_PropertyChanged"/>
+                    <TextBlock Text="{Binding #SliderTx.Value, StringFormat={}{0:F0}}" VerticalAlignment="Center" Foreground="#FFFFFF"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Spacing="10">
+                    <TextBlock Text="ty:" VerticalAlignment="Center" Width="30" Foreground="#FFFFFF"/>
+                    <Slider Name="SliderTy" Minimum="-300" Maximum="300" Value="100" Width="250" Foreground="#00D4FF"
+                            PropertyChanged="Slider_PropertyChanged"/>
+                    <TextBlock Text="{Binding #SliderTy.Value, StringFormat={}{0:F0}}" VerticalAlignment="Center" Foreground="#FFFFFF"/>
+                </StackPanel>
+                <TextBlock Name="LblInfo" FontFamily="Consolas" FontSize="11" Foreground="#CCCCCC"/>
+            </StackPanel>
+        </Border>
+        
+        <local:DrawingCanvas Name="MainCanvas" Background="#1a1a1a" Paint="OnPaint"/>
+    </DockPanel>
+</UserControl>

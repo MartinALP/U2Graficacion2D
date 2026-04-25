@@ -1,0 +1,31 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:U2Graficacion2D"
+             x:Class="U2Graficacion2D.Tabs.TabFractales"
+             Background="#3D3D3D"
+             Foreground="#FFFFFF">
+    <DockPanel LastChildFill="True">
+        <Border DockPanel.Dock="Bottom" Height="100" Background="#2D2D2D" BorderBrush="#555555" BorderThickness="0,1,0,0">
+            <StackPanel Orientation="Horizontal" Margin="15" Spacing="20">
+                <StackPanel Orientation="Horizontal" Spacing="5">
+                    <TextBlock Text="Tipo:" VerticalAlignment="Center" Foreground="#FFFFFF"/>
+                    <ComboBox Name="CbTipo" SelectedIndex="0" Width="180" SelectionChanged="Control_Changed" Background="#4D4D4D" Foreground="#FFFFFF">
+                        <ComboBoxItem>Árbol fractal</ComboBoxItem>
+                        <ComboBoxItem>Copo de Koch</ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Spacing="5">
+                    <TextBlock Text="Prof:" VerticalAlignment="Center" Foreground="#FFFFFF"/>
+                    <Slider Name="SliderProf" Minimum="1" Maximum="12" Value="6" Width="150" PropertyChanged="Slider_PropertyChanged"/>
+                    <TextBlock Text="{Binding #SliderProf.Value, StringFormat={}{0:0}}" VerticalAlignment="Center" Foreground="#FFFFFF"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Spacing="5">
+                    <TextBlock Text="Ángulo°:" VerticalAlignment="Center" Foreground="#FFFFFF"/>
+                    <Slider Name="SliderAng" Minimum="5" Maximum="60" Value="25" Width="150" PropertyChanged="Slider_PropertyChanged"/>
+                    <TextBlock Text="{Binding #SliderAng.Value, StringFormat={}{0:0}}" VerticalAlignment="Center" Foreground="#FFFFFF"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+        <local:DrawingCanvas Name="MainCanvas" Background="#1a1a1a" Paint="OnPaint"/>
+    </DockPanel>
+</UserControl>

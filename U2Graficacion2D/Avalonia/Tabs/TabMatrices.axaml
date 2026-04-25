@@ -1,0 +1,17 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:U2Graficacion2D"
+             x:Class="U2Graficacion2D.Tabs.TabMatrices"
+             Background="#3D3D3D"
+             Foreground="#FFFFFF">
+    <DockPanel LastChildFill="True">
+        <Border DockPanel.Dock="Bottom" Height="100" Background="#2D2D2D" BorderBrush="#555555" BorderThickness="0,1,0,0">
+            <StackPanel Orientation="Vertical" Margin="15" Spacing="8">
+                <TextBlock Text="Matrices de Transformación 2D" FontSize="14" FontWeight="Bold" Foreground="#00D4FF"/>
+                <TextBlock Name="LblInfo" FontFamily="Consolas" FontSize="10" Foreground="#CCCCCC" TextWrapping="Wrap"/>
+            </StackPanel>
+        </Border>
+        
+        <local:DrawingCanvas Name="MainCanvas" Background="#1a1a1a" Paint="OnPaint"/>
+    </DockPanel>
+</UserControl>
