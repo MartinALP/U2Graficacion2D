@@ -8,25 +8,31 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "/Users/uziel/.nuget/packages/": {}
+    "C:\\Users\\velas\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/uziel/GRAFICACION/U2Graficacion2D/U2Graficacion2D/U2Graficacion2D.csproj",
+      "projectUniqueName": "C:\\Users\\velas\\Downloads\\U2Graficacion2D\\U2Graficacion2D\\U2Graficacion2D.csproj",
       "projectName": "U2Graficacion2D",
-      "projectPath": "/Users/uziel/GRAFICACION/U2Graficacion2D/U2Graficacion2D/U2Graficacion2D.csproj",
-      "packagesPath": "/Users/uziel/.nuget/packages/",
-      "outputPath": "/Users/uziel/GRAFICACION/U2Graficacion2D/U2Graficacion2D/obj/",
+      "projectPath": "C:\\Users\\velas\\Downloads\\U2Graficacion2D\\U2Graficacion2D\\U2Graficacion2D.csproj",
+      "packagesPath": "C:\\Users\\velas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\velas\\Downloads\\U2Graficacion2D\\U2Graficacion2D\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/uziel/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\velas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0-windows"
       ],
       "sources": {
-        "/opt/homebrew/Cellar/dotnet/10.0.105/libexec/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -64,19 +70,19 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.25, 8.0.25]"
+            "version": "[8.0.24, 8.0.24]"
           },
           {
-            "name": "Microsoft.NETCore.App.Host.osx-arm64",
-            "version": "[8.0.25, 8.0.25]"
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[8.0.24, 8.0.24]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.25, 8.0.25]"
+            "version": "[8.0.24, 8.0.24]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.25, 8.0.25]"
+            "version": "[8.0.24, 8.0.24]"
           }
         ],
         "frameworkReferences": {
@@ -87,7 +93,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.105/libexec/sdk/10.0.105/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
