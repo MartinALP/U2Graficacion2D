@@ -20,7 +20,8 @@ namespace U2Graficacion2D;
 
 public class TabMatrices : UserControl
 {
-    private readonly PointF[] _original = { new(0, -50), new(-40, 35), new(40, 35) };
+    // Vértices en coordenadas MATEMÁTICAS: Y+ hacia arriba
+    private readonly PointF[] _original = { new(0, 50), new(-40, -35), new(40, -35) };
 
     private float _tx = 0, _ty = 0, _sx = 1f, _sy = 1f, _angulo = 0f;
 
@@ -99,9 +100,7 @@ public class TabMatrices : UserControl
         g.SmoothingMode = SmoothingMode.AntiAlias;
         float cx = _canvas.Width / 2f, cy = _canvas.Height / 2f;
 
-        using var penEje = new Pen(Color.LightGray, 1);
-        g.DrawLine(penEje, 0, cy, _canvas.Width, cy);
-        g.DrawLine(penEje, cx, 0, cx, _canvas.Height);
+        GraficoUtil.DibujarEjes(g, cx, cy, _canvas.Width, _canvas.Height);
 
         double r = _angulo * Math.PI / 180.0;
         float cos = (float)Math.Cos(r), sin = (float)Math.Sin(r);
@@ -110,7 +109,8 @@ public class TabMatrices : UserControl
         float[,] R = { { cos, -sin, 0 }, { sin, cos, 0 }, { 0, 0, 1 } };
         var M = Mul(T, Mul(S, R));
 
-        var orig = _original.Select(p => new PointF(cx + p.X, cy + p.Y)).ToArray();
+        // Original (gris) — a pantalla
+        var orig = GraficoUtil.ToScreen(_original, cx, cy);
         g.DrawPolygon(Pens.Gray, orig);
 
         var trans = _original.Select(p => AplicarM(M, p, cx, cy)).ToArray();
@@ -133,11 +133,12 @@ public class TabMatrices : UserControl
         return C;
     }
 
+    // AplicarM: multiplica la matriz por el punto y convierte a pantalla (Y invertido)
     private static PointF AplicarM(float[,] M, PointF p, float ox, float oy)
     {
         float xn = M[0, 0] * p.X + M[0, 1] * p.Y + M[0, 2];
         float yn = M[1, 0] * p.X + M[1, 1] * p.Y + M[1, 2];
-        return new PointF(ox + xn, oy + yn);
+        return new PointF(ox + xn, oy - yn);  // oy - yn: Y+ hacia arriba
     }
 
     private static string AplicarStr(float[,] M, PointF p)

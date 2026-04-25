@@ -9,8 +9,9 @@ namespace U2Graficacion2D;
 
 public class TabTraslacion : UserControl
 {
-    // Triángulo original (centrado en origen lógico)
-    private readonly PointF[] _original = { new(0, -60), new(-50, 40), new(50, 40) };
+    // Triángulo original — coordenadas MATEMÁTICAS: Y+ hacia arriba
+    // Vértice 0: cima (0, 60) = sobre el eje X  |  Vértices 1,2: base (y=-40) = bajo el eje X
+    private readonly PointF[] _original = { new(0, 60), new(-50, -40), new(50, -40) };
 
     private float _tx = 150, _ty = 100;
     private readonly TrackBar _tbTx, _tbTy;
@@ -57,36 +58,33 @@ public class TabTraslacion : UserControl
         var g = e.Graphics;
         g.SmoothingMode = SmoothingMode.AntiAlias;
 
-        // Origen visual en centro del canvas
+        // Origen matemático en el centro del canvas
         float cx = _canvas.Width / 2f, cy = _canvas.Height / 2f;
 
-        // Ejes
-        using var penEje = new Pen(Color.LightGray, 1);
-        g.DrawLine(penEje, 0, cy, _canvas.Width, cy);
-        g.DrawLine(penEje, cx, 0, cx, _canvas.Height);
+        // Ejes con etiquetas X+/X−/Y+/Y− y graduación numérica
+        GraficoUtil.DibujarEjes(g, cx, cy, _canvas.Width, _canvas.Height);
 
-        // Triángulo original (gris)
-        var orig = Trasladar(_original, cx, cy);
+        // Triángulo original (gris) — convertido a coordenadas de pantalla
+        var orig = GraficoUtil.ToScreen(_original, cx, cy);
         g.DrawPolygon(Pens.Gray, orig);
 
-        // Triángulo trasladado (azul)
-        var tras = Trasladar(_original, cx + _tx, cy + _ty);
+        // Triángulo trasladado: x'=x+tx  y'=y+ty  (luego a pantalla)
+        var trasMath = _original.Select(p => new PointF(p.X + _tx, p.Y + _ty)).ToArray();
+        var tras = GraficoUtil.ToScreen(trasMath, cx, cy);
         using var br = new SolidBrush(Color.FromArgb(80, 0, 100, 220));
         g.FillPolygon(br, tras);
         g.DrawPolygon(new Pen(Color.Blue, 2), tras);
 
-        // Vector de traslación (flecha roja)
+        // Vector de traslación: del origen (0,0) al punto (tx, ty) — en pantalla
+        // tx+ → derecha  |  ty+ → arriba  (cy − ty en pantalla)
         using var penFlecha = new Pen(Color.Red, 2) { EndCap = LineCap.ArrowAnchor };
-        g.DrawLine(penFlecha, cx, cy, cx + _tx, cy + _ty);
+        g.DrawLine(penFlecha, cx, cy, cx + _tx, cy - _ty);
 
         // Leyenda
-        g.DrawString("Original", new Font("Segoe UI", 8), Brushes.Gray, 4, 4);
-        g.DrawString("Trasladado", new Font("Segoe UI", 8), Brushes.Blue, 4, 18);
-        g.DrawString("Vector (tx,ty)", new Font("Segoe UI", 8), Brushes.Red, 4, 32);
+        g.DrawString("Original",      new Font("Segoe UI", 8), Brushes.Gray, 4, 4);
+        g.DrawString("Trasladado",    new Font("Segoe UI", 8), Brushes.Blue, 4, 18);
+        g.DrawString("Vector (tx,ty)",new Font("Segoe UI", 8), Brushes.Red,  4, 32);
     }
-
-    private static PointF[] Trasladar(PointF[] pts, float dx, float dy)
-        => pts.Select(p => new PointF(p.X + dx, p.Y + dy)).ToArray();
 
     private static TrackBar CrearTrack(int min, int max, int val)
         => new() { Minimum = min, Maximum = max, Value = val, Width = 200, TickFrequency = 50 };

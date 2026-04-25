@@ -10,6 +10,8 @@ namespace U2Graficacion2D;
 
 public class TabSesgado : UserControl
 {
+    // Vértices en coordenadas MATEMÁTICAS: Y+ hacia arriba
+    // Rectángulo: esquina superior-derecha=(60,50), inferior-izquierda=(-60,-50)
     private readonly PointF[] _original = { new(-60, -50), new(60, -50), new(60, 50), new(-60, 50) };
     private float _shx = 0f, _shy = 0f;
     private readonly TrackBar _tbShx, _tbShy;
@@ -57,16 +59,17 @@ public class TabSesgado : UserControl
         g.SmoothingMode = SmoothingMode.AntiAlias;
         float cx = _canvas.Width / 2f, cy = _canvas.Height / 2f;
 
-        using var penEje = new Pen(Color.LightGray, 1);
-        g.DrawLine(penEje, 0, cy, _canvas.Width, cy);
-        g.DrawLine(penEje, cx, 0, cx, _canvas.Height);
+        GraficoUtil.DibujarEjes(g, cx, cy, _canvas.Width, _canvas.Height);
 
-        var orig = _original.Select(p => new PointF(cx + p.X, cy + p.Y)).ToArray();
+        // Original (gris)
+        var orig = GraficoUtil.ToScreen(_original, cx, cy);
         g.DrawPolygon(Pens.Gray, orig);
 
-        var seg = _original.Select(p => new PointF(
-            cx + p.X + _shx * p.Y,
-            cy + p.Y + _shy * p.X)).ToArray();
+        // Sesgado: x'=x+shx·y   y'=y+shy·x  (luego a pantalla)
+        var seg = GraficoUtil.ToScreen(
+            _original.Select(p => new PointF(
+                p.X + _shx * p.Y,
+                p.Y + _shy * p.X)).ToArray(), cx, cy);
 
         using var br = new SolidBrush(Color.FromArgb(80, 220, 120, 0));
         g.FillPolygon(br, seg);

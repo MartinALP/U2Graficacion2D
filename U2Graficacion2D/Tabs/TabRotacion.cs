@@ -11,7 +11,8 @@ namespace U2Graficacion2D;
 
 public class TabRotacion : UserControl
 {
-    private readonly PointF[] _original = { new(0, -70), new(-50, 40), new(50, 40) };
+    // Vértices en coordenadas MATEMÁTICAS: Y+ hacia arriba
+    private readonly PointF[] _original = { new(0, 70), new(-50, -40), new(50, -40) };
     private float _angulo = 0f;
     private readonly TrackBar _tbAngulo;
     private readonly Label _lblInfo;
@@ -57,30 +58,36 @@ public class TabRotacion : UserControl
         g.SmoothingMode = SmoothingMode.AntiAlias;
         float cx = _canvas.Width / 2f, cy = _canvas.Height / 2f;
 
-        using var penEje = new Pen(Color.LightGray, 1);
-        g.DrawLine(penEje, 0, cy, _canvas.Width, cy);
-        g.DrawLine(penEje, cx, 0, cx, _canvas.Height);
+        GraficoUtil.DibujarEjes(g, cx, cy, _canvas.Width, _canvas.Height);
 
-        // Original
-        var orig = _original.Select(p => new PointF(cx + p.X, cy + p.Y)).ToArray();
+        // Original (gris)
+        var orig = GraficoUtil.ToScreen(_original, cx, cy);
         g.DrawPolygon(Pens.Gray, orig);
 
-        // Rotado
+        // Rotación en coordenadas matemáticas (Y+ arriba):
+        //   x' = x·cos(θ) − y·sin(θ)
+        //   y' = x·sin(θ) + y·cos(θ)
+        // θ positivo = giro ANTIHORARIO (convención matemática)
         double rad = _angulo * Math.PI / 180.0;
         float cos = (float)Math.Cos(rad), sin = (float)Math.Sin(rad);
-        var rot = _original.Select(p => new PointF(
-            cx + p.X * cos - p.Y * sin,
-            cy + p.X * sin + p.Y * cos)).ToArray();
+        var rot = GraficoUtil.ToScreen(
+            _original.Select(p => new PointF(
+                p.X * cos - p.Y * sin,
+                p.X * sin + p.Y * cos)).ToArray(), cx, cy);
 
         using var br = new SolidBrush(Color.FromArgb(80, 200, 0, 200));
         g.FillPolygon(br, rot);
         g.DrawPolygon(new Pen(Color.Purple, 2), rot);
 
-        // Arco que muestra el ángulo
+        // Arco: desde eje X+ (ángulo 0) barriendo en sentido antihorario θ grados
+        // En GDI+ (pantalla): sentido antihorario = sweep negativo
         using var penArc = new Pen(Color.OrangeRed, 1.5f);
-        g.DrawArc(penArc, cx - 30, cy - 30, 60, 60, -90, -_angulo);
+        g.DrawArc(penArc, cx - 35, cy - 35, 70, 70, 0, -_angulo);
+        // Marcador en el eje X+ (inicio del arco)
+        g.FillEllipse(Brushes.OrangeRed, cx + 35 - 3, cy - 3, 6, 6);
 
-        g.DrawString("Original",  new Font("Segoe UI", 8), Brushes.Gray, 4, 4);
+        g.DrawString("Original",        new Font("Segoe UI", 8), Brushes.Gray,   4, 4);
         g.DrawString($"Rotado {_angulo}°", new Font("Segoe UI", 8), Brushes.Purple, 4, 18);
+        g.DrawString("θ+ = antihorario",  new Font("Segoe UI", 8), Brushes.OrangeRed, 4, 32);
     }
 }

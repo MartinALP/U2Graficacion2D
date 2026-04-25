@@ -11,7 +11,8 @@ namespace U2Graficacion2D;
 
 public class TabEscalamiento : UserControl
 {
-    private readonly PointF[] _original = { new(0, -60), new(-50, 40), new(50, 40) };
+    // Vértices en coordenadas MATEMÁTICAS: Y+ hacia arriba
+    private readonly PointF[] _original = { new(0, 60), new(-50, -40), new(50, -40) };
 
     private float _sx = 1f, _sy = 1f;
     private readonly TrackBar _tbSx, _tbSy;
@@ -58,16 +59,15 @@ public class TabEscalamiento : UserControl
         g.SmoothingMode = SmoothingMode.AntiAlias;
         float cx = _canvas.Width / 2f, cy = _canvas.Height / 2f;
 
-        using var penEje = new Pen(Color.LightGray, 1);
-        g.DrawLine(penEje, 0, cy, _canvas.Width, cy);
-        g.DrawLine(penEje, cx, 0, cx, _canvas.Height);
+        GraficoUtil.DibujarEjes(g, cx, cy, _canvas.Width, _canvas.Height);
 
         // Original (gris)
-        var orig = _original.Select(p => new PointF(cx + p.X, cy + p.Y)).ToArray();
+        var orig = GraficoUtil.ToScreen(_original, cx, cy);
         g.DrawPolygon(Pens.Gray, orig);
 
-        // Escalado (verde)
-        var esc = _original.Select(p => new PointF(cx + _sx * p.X, cy + _sy * p.Y)).ToArray();
+        // Escalado: x'=sx·x  y'=sy·y  (luego a pantalla)
+        var esc = GraficoUtil.ToScreen(
+            _original.Select(p => new PointF(_sx * p.X, _sy * p.Y)).ToArray(), cx, cy);
         using var br = new SolidBrush(Color.FromArgb(80, 0, 180, 0));
         g.FillPolygon(br, esc);
         g.DrawPolygon(new Pen(Color.Green, 2), esc);
