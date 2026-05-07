@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("U2Graficacion2D")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eed3ce1de76c2467c14578860286998aecc6b38b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c785554f460957118ba8a4d64986539a0729383f")]
 [assembly: System.Reflection.AssemblyProductAttribute("U2Graficacion2D")]
 [assembly: System.Reflection.AssemblyTitleAttribute("U2Graficacion2D")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

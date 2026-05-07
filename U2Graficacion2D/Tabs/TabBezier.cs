@@ -61,7 +61,7 @@ public class TabBezier : UserControl
             float t = i / (float)pasos;
             pts[i] = Bezier4(t, _ctrl[0], _ctrl[1], _ctrl[2], _ctrl[3]);
         }
-        g.DrawLines(new Pen(Color.DarkBlue, 2), pts);
+        g.DrawLines(new Pen(Color.DarkMagenta, 2), pts);
 
         // Puntos de control
         for (int i = 0; i < _ctrl.Length; i++)
