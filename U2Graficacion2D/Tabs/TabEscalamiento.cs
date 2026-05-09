@@ -12,11 +12,7 @@ namespace U2Graficacion2D;
 public class TabEscalamiento : UserControl
 {
     // Vértices en coordenadas MATEMÁTICAS: Y+ hacia arriba
-<<<<<<< HEAD
-    private readonly PointF[] _original = { new(0, 20), new(-50, -40), new(50, -40) };
-
-    private readonly PointF[] _original = { new(0, 40), new(-50, -40), new(50, -40) };
->>>>>>> Walas
+    private readonly PointF[] _original = { new(0, 60), new(-50, -40), new(50, -40) };
 
     private float _sx = 1f, _sy = 1f;
     private readonly TrackBar _tbSx, _tbSy;
