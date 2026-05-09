@@ -1,0 +1,164 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\celina\\Graficacion\\U2Graficacion2D\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2A2BF35F-392F-728E-43A8-7AFFEFD58111}|U2Graficacion2D\\U2Graficacion2D.csproj|c:\\celina\\graficacion\\u2graficacion2d\\u2graficacion2d\\tabs\\tabsesgado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A2BF35F-392F-728E-43A8-7AFFEFD58111}|U2Graficacion2D\\U2Graficacion2D.csproj|solutionrelative:u2graficacion2d\\tabs\\tabsesgado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A2BF35F-392F-728E-43A8-7AFFEFD58111}|U2Graficacion2D\\U2Graficacion2D.csproj|C:\\celina\\Graficacion\\U2Graficacion2D\\u2graficacion2d\\tabs\\tabsesgado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2A2BF35F-392F-728E-43A8-7AFFEFD58111}|U2Graficacion2D\\U2Graficacion2D.csproj|solutionrelative:u2graficacion2d\\tabs\\tabsesgado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A2BF35F-392F-728E-43A8-7AFFEFD58111}|U2Graficacion2D\\U2Graficacion2D.csproj|c:\\celina\\graficacion\\u2graficacion2d\\u2graficacion2d\\avalonia\\tabs\\tabsesgado.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2A2BF35F-392F-728E-43A8-7AFFEFD58111}|U2Graficacion2D\\U2Graficacion2D.csproj|solutionrelative:u2graficacion2d\\avalonia\\tabs\\tabsesgado.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A2BF35F-392F-728E-43A8-7AFFEFD58111}|U2Graficacion2D\\U2Graficacion2D.csproj|c:\\celina\\graficacion\\u2graficacion2d\\u2graficacion2d\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A2BF35F-392F-728E-43A8-7AFFEFD58111}|U2Graficacion2D\\U2Graficacion2D.csproj|solutionrelative:u2graficacion2d\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A2BF35F-392F-728E-43A8-7AFFEFD58111}|U2Graficacion2D\\U2Graficacion2D.csproj|c:\\celina\\graficacion\\u2graficacion2d\\u2graficacion2d\\graficoutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A2BF35F-392F-728E-43A8-7AFFEFD58111}|U2Graficacion2D\\U2Graficacion2D.csproj|solutionrelative:u2graficacion2d\\graficoutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A2BF35F-392F-728E-43A8-7AFFEFD58111}|U2Graficacion2D\\U2Graficacion2D.csproj|c:\\celina\\graficacion\\u2graficacion2d\\u2graficacion2d\\form1.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{2A2BF35F-392F-728E-43A8-7AFFEFD58111}|U2Graficacion2D\\U2Graficacion2D.csproj|solutionrelative:u2graficacion2d\\form1.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A2BF35F-392F-728E-43A8-7AFFEFD58111}|U2Graficacion2D\\U2Graficacion2D.csproj|c:\\celina\\graficacion\\u2graficacion2d\\u2graficacion2d\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A2BF35F-392F-728E-43A8-7AFFEFD58111}|U2Graficacion2D\\U2Graficacion2D.csproj|solutionrelative:u2graficacion2d\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A2BF35F-392F-728E-43A8-7AFFEFD58111}|U2Graficacion2D\\U2Graficacion2D.csproj|C:\\celina\\Graficacion\\U2Graficacion2D\\u2graficacion2d\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2A2BF35F-392F-728E-43A8-7AFFEFD58111}|U2Graficacion2D\\U2Graficacion2D.csproj|solutionrelative:u2graficacion2d\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{a2c8b774-0984-495f-8428-e6140b2d66e0}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TabSesgado.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\celina\\Graficacion\\U2Graficacion2D\\U2Graficacion2D\\Tabs\\TabSesgado.cs",
+              "RelativeDocumentMoniker": "U2Graficacion2D\\Tabs\\TabSesgado.cs",
+              "ToolTip": "C:\\celina\\Graficacion\\U2Graficacion2D\\U2Graficacion2D\\Tabs\\TabSesgado.cs [Dise\u00F1o]",
+              "RelativeToolTip": "U2Graficacion2D\\Tabs\\TabSesgado.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T05:24:17.759Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TabSesgado.cs",
+              "DocumentMoniker": "C:\\celina\\Graficacion\\U2Graficacion2D\\U2Graficacion2D\\Tabs\\TabSesgado.cs",
+              "RelativeDocumentMoniker": "U2Graficacion2D\\Tabs\\TabSesgado.cs",
+              "ToolTip": "C:\\celina\\Graficacion\\U2Graficacion2D\\U2Graficacion2D\\Tabs\\TabSesgado.cs",
+              "RelativeToolTip": "U2Graficacion2D\\Tabs\\TabSesgado.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAiwIUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T05:23:57.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TabSesgado.axaml",
+              "DocumentMoniker": "C:\\celina\\Graficacion\\U2Graficacion2D\\U2Graficacion2D\\Avalonia\\Tabs\\TabSesgado.axaml",
+              "RelativeDocumentMoniker": "U2Graficacion2D\\Avalonia\\Tabs\\TabSesgado.axaml",
+              "ToolTip": "C:\\celina\\Graficacion\\U2Graficacion2D\\U2Graficacion2D\\Avalonia\\Tabs\\TabSesgado.axaml",
+              "RelativeToolTip": "U2Graficacion2D\\Avalonia\\Tabs\\TabSesgado.axaml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAMAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-09T05:23:51.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GraficoUtil.cs",
+              "DocumentMoniker": "C:\\celina\\Graficacion\\U2Graficacion2D\\U2Graficacion2D\\GraficoUtil.cs",
+              "RelativeDocumentMoniker": "U2Graficacion2D\\GraficoUtil.cs",
+              "ToolTip": "C:\\celina\\Graficacion\\U2Graficacion2D\\U2Graficacion2D\\GraficoUtil.cs",
+              "RelativeToolTip": "U2Graficacion2D\\GraficoUtil.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T05:23:31.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.resx",
+              "DocumentMoniker": "C:\\celina\\Graficacion\\U2Graficacion2D\\U2Graficacion2D\\Form1.resx",
+              "RelativeDocumentMoniker": "U2Graficacion2D\\Form1.resx",
+              "ToolTip": "C:\\celina\\Graficacion\\U2Graficacion2D\\U2Graficacion2D\\Form1.resx",
+              "RelativeToolTip": "U2Graficacion2D\\Form1.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2026-05-09T05:23:22.778Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\celina\\Graficacion\\U2Graficacion2D\\U2Graficacion2D\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "U2Graficacion2D\\Form1.Designer.cs",
+              "ToolTip": "C:\\celina\\Graficacion\\U2Graficacion2D\\U2Graficacion2D\\Form1.Designer.cs",
+              "RelativeToolTip": "U2Graficacion2D\\Form1.Designer.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T05:23:18.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\celina\\Graficacion\\U2Graficacion2D\\U2Graficacion2D\\Form1.cs",
+              "RelativeDocumentMoniker": "U2Graficacion2D\\Form1.cs",
+              "ToolTip": "C:\\celina\\Graficacion\\U2Graficacion2D\\U2Graficacion2D\\Form1.cs",
+              "RelativeToolTip": "U2Graficacion2D\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T05:22:54.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\celina\\Graficacion\\U2Graficacion2D\\U2Graficacion2D\\Form1.cs",
+              "RelativeDocumentMoniker": "U2Graficacion2D\\Form1.cs",
+              "ToolTip": "C:\\celina\\Graficacion\\U2Graficacion2D\\U2Graficacion2D\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "U2Graficacion2D\\Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T05:22:45.781Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

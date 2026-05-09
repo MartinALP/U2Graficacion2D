@@ -124,3 +124,6 @@
 /Users/uziel/GRAFICACION/U2Graficacion2D/U2Graficacion2D/Avalonia/obj/Debug/net10.0/U2Grafic.C58724AC.Up2Date
 /Users/uziel/GRAFICACION/U2Graficacion2D/U2Graficacion2D/Avalonia/obj/Debug/net10.0/U2Graficacion2D_Avalonia.genruntimeconfig.cache
 /Users/uziel/GRAFICACION/U2Graficacion2D/U2Graficacion2D/Avalonia/obj/Debug/net10.0/ref/U2Graficacion2D_Avalonia.dll
+C:\celina\Graficacion\U2Graficacion2D\U2Graficacion2D\Avalonia\obj\Debug\net10.0\U2Graficacion2D_Avalonia.dll
+C:\celina\Graficacion\U2Graficacion2D\U2Graficacion2D\Avalonia\obj\Debug\net10.0\refint\U2Graficacion2D_Avalonia.dll
+C:\celina\Graficacion\U2Graficacion2D\U2Graficacion2D\Avalonia\obj\Debug\net10.0\U2Graficacion2D_Avalonia.pdb

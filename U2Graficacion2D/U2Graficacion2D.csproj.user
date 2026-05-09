@@ -1,8 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <ItemGroup>
-        <Compile Update="Form1.cs">
-            <SubType>Form</SubType>
-        </Compile>
-    </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\TabBezier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Tabs\TabBSpline.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Tabs\TabEscalamiento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Tabs\TabFractales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Tabs\TabFuentes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Tabs\TabMatrices.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Tabs\TabRotacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Tabs\TabSesgado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Tabs\TabTraslacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
 </Project>
