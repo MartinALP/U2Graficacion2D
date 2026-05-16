@@ -1,3 +1,5 @@
+using U2Graficacion3D;
+
 namespace U2Graficacion2D;
 
 public partial class Form1 : Form
@@ -14,6 +16,7 @@ public partial class Form1 : Form
         AgregarTab("2.3.2 B-Spline",      new TabBSpline());
         AgregarTab("2.4 Fractales",       new TabFractales());
         AgregarTab("2.5 Fuentes",         new TabFuentes());
+        AgregarTab("2.6 Traslación 3D", new TabTraslacion3dMendez());
     }
 
     private void AgregarTab(string titulo, Control contenido)
