@@ -81,13 +81,13 @@ public class TabRotacion : UserControl
 
         // Arco: desde eje X+ (ángulo 0) barriendo en sentido antihorario θ grados
         // En GDI+ (pantalla): sentido antihorario = sweep negativo
-        using var penArc = new Pen(Color.OrangeRed, 1.5f);
+        using var penArc = new Pen(Color.Red, 1.5f);
         g.DrawArc(penArc, cx - 35, cy - 35, 70, 70, 0, -_angulo);
         // Marcador en el eje X+ (inicio del arco)
-        g.FillEllipse(Brushes.OrangeRed, cx + 35 - 3, cy - 3, 6, 6);
+        g.FillEllipse(Brushes.Red, cx + 35 - 3, cy - 3, 6, 6);
 
         g.DrawString("Original",        new Font("Segoe UI", 8), Brushes.Gray,   4, 4);
         g.DrawString($"Rotado {_angulo}°", new Font("Segoe UI", 8), Brushes.Purple, 4, 18);
-        g.DrawString("θ+ = antihorario",  new Font("Segoe UI", 8), Brushes.OrangeRed, 4, 32);
+        g.DrawString("θ+ = antihorario",  new Font("Segoe UI", 8), Brushes.Red, 4, 32);
     }
 }
