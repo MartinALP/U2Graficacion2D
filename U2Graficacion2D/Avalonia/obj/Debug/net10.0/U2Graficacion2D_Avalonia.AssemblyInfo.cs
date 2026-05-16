@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("U2Graficacion2D_Avalonia")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+662a4d15d16e1a6ccdc87388882396ce8e381032")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79a11e2c6b992149cef893b05b97e73c1a94bd9c")]
 [assembly: System.Reflection.AssemblyProductAttribute("U2Graficacion2D_Avalonia")]
 [assembly: System.Reflection.AssemblyTitleAttribute("U2Graficacion2D_Avalonia")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -22,6 +22,8 @@ public class DrawingCanvas : Canvas
 
     public DrawingCanvas()
     {
+        ClipToBounds = true;
+        
         this.Loaded += (s, e) =>
         {
             _customVisual = new CustomVisual(this);
@@ -55,14 +57,18 @@ public class DrawingCanvas : Canvas
         {
             var bounds = _parent.Bounds;
             
-            // Draw background
-            if (_parent.Background != null)
+            // Strictly clip drawing to bounds so shapes don't overlap controls
+            using (context.PushClip(new Rect(bounds.Size)))
             {
-                context.FillRectangle(_parent.Background, new Rect(bounds.Size));
-            }
+                // Draw background
+                if (_parent.Background != null)
+                {
+                    context.FillRectangle(_parent.Background, new Rect(bounds.Size));
+                }
 
-            // Invoke Paint event with the drawing context
-            _parent.Paint?.Invoke(_parent, context);
+                // Invoke Paint event with the drawing context
+                _parent.Paint?.Invoke(_parent, context);
+            }
         }
     }
 }

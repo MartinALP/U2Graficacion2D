@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9fTeD6PcKlg=",
+  "dgSpecHash": "kpHyw4rEJ/o=",
   "success": true,
   "projectFilePath": "/Users/uziel/GRAFICACION/U2Graficacion2D/U2Graficacion2D/Avalonia/U2Graficacion2D_Avalonia.csproj",
   "expectedPackageFiles": [
@@ -43,7 +43,7 @@
     {
       "code": "NU1903",
       "level": "Warning",
-      "message": "El paquete \"Tmds.DBus.Protocol\" 0.15.0 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-xrw6-gwf8-vvr9",
+      "message": "Package 'Tmds.DBus.Protocol' 0.15.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-xrw6-gwf8-vvr9",
       "projectPath": "/Users/uziel/GRAFICACION/U2Graficacion2D/U2Graficacion2D/Avalonia/U2Graficacion2D_Avalonia.csproj",
       "warningLevel": 1,
       "filePath": "/Users/uziel/GRAFICACION/U2Graficacion2D/U2Graficacion2D/Avalonia/U2Graficacion2D_Avalonia.csproj",
