@@ -16,12 +16,9 @@ public partial class Form1 : Form
         AgregarTab("2.3.2 B-Spline",      new TabBSpline());
         AgregarTab("2.4 Fractales",       new TabFractales());
         AgregarTab("2.5 Fuentes",         new TabFuentes());
-<<<<<<< HEAD
         AgregarTab("2.1.1.1 TabTraslacionWalas", new TabTraslacionWalas());
         AgregarTab("2.1.2.1 TabEscalamiento3d", new TabEscalamiento3D());
-=======
         AgregarTab("2.6 Traslación 3D", new TabTraslacion3dMendez());
->>>>>>> 6eb43866630fd3e7eeb1961ad6cbad9e3c7a697b
     }
 
     private void AgregarTab(string titulo, Control contenido)
