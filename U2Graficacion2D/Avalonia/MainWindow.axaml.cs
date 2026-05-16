@@ -18,6 +18,7 @@ public partial class MainWindow : Window
         AgregarTab("2.3.2 B-Spline",      new TabBSpline());
         AgregarTab("2.4 Fractales",       new TabFractales());
         AgregarTab("2.5 Fuentes",         new TabFuentes());
+        AgregarTab("2.6 Sesgado 3D",      new TabSesgado26());
     }
 
     private void AgregarTab(string titulo, Control contenido)
