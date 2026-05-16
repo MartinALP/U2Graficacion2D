@@ -15,6 +15,7 @@ public partial class Form1 : Form
         AgregarTab("2.4 Fractales",       new TabFractales());
         AgregarTab("2.5 Fuentes",         new TabFuentes());
         AgregarTab("2.1.1.1 TabTraslacionWalas", new TabTraslacionWalas());
+        AgregarTab("2.1.2.1 TabEscalamiento3d", new TabEscalamiento3D());
     }
 
     private void AgregarTab(string titulo, Control contenido)
