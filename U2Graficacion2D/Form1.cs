@@ -1,3 +1,5 @@
+using U2Graficacion3D;
+
 namespace U2Graficacion2D;
 
 public partial class Form1 : Form
@@ -14,9 +16,15 @@ public partial class Form1 : Form
         AgregarTab("2.3.2 B-Spline",      new TabBSpline());
         AgregarTab("2.4 Fractales",       new TabFractales());
         AgregarTab("2.5 Fuentes",         new TabFuentes());
+<<<<<<< HEAD
         AgregarTab("2.5.8 Final",         new TabFuentes());
         AgregarTab("4D Rotación - Emmanuel Valenzuela (22540083)", new Tab4D());
 
+=======
+        AgregarTab("2.1.1.1 TabTraslacionWalas", new TabTraslacionWalas());
+        AgregarTab("2.1.2.1 TabEscalamiento3d", new TabEscalamiento3D());
+        AgregarTab("2.6 Traslación 3D", new TabTraslacion3dMendez());
+>>>>>>> 104b355ccbc077a30fbeec600dbf5ce912794ce3
     }
 
     private void AgregarTab(string titulo, Control contenido)

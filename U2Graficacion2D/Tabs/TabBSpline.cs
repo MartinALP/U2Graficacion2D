@@ -24,15 +24,15 @@ public class TabBSpline : UserControl
 {
     private PointF[] _ctrl =
     {
-        new(60, 350), new(150, 100), new(280, 300), new(400, 80),
-        new(520, 300), new(620, 150), new(700, 350)
+        new(200, 550), new(450, 100), new(380, 300), new(200, 100),
+        new(100, 600), new(520, 150), new(300, 350)
     };
     private int _drag = -1;
     private readonly Label _lblInfo;
 
     public TabBSpline()
     {
-        BackColor = Color.White;
+        BackColor = Color.Black;
         _lblInfo = new Label
         {
             Dock = DockStyle.Bottom, Height = 40,
@@ -56,7 +56,7 @@ public class TabBSpline : UserControl
         g.DrawLines(penCtrl, _ctrl);
 
         // Segmentos B-Spline cúbica uniforme
-        Color[] colores = { Color.Blue, Color.DarkGreen, Color.DarkRed, Color.Purple, Color.Teal };
+        Color[] colores = { Color.Black, Color.DarkGray, Color.DarkBlue, Color.Purple, Color.Teal };
         for (int i = 0; i + 3 < _ctrl.Length; i++)
         {
             var seg = BSplineSegmento(_ctrl[i], _ctrl[i + 1], _ctrl[i + 2], _ctrl[i + 3], 200);

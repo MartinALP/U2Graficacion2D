@@ -1,0 +1,49 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:U2Graficacion2D"
+             x:Class="U2Graficacion2D.Tabs.TabSesgado26"
+             Background="#3D3D3D"
+             Foreground="#FFFFFF">
+    <DockPanel LastChildFill="True">
+        <Border DockPanel.Dock="Bottom" Height="190" Background="#2D2D2D" BorderBrush="#555555" BorderThickness="0,1,0,0">
+            <StackPanel Orientation="Vertical" Margin="15" Spacing="8">
+                <StackPanel Orientation="Horizontal" Spacing="10">
+                    <TextBlock Text="shx (X-Y):" VerticalAlignment="Center" Width="80" Foreground="#FFFFFF"/>
+                    <Slider Name="SliderShx" Minimum="-2" Maximum="2" Value="0" Width="160" Foreground="#00D4FF"
+                            PropertyChanged="Slider_PropertyChanged"/>
+                    <TextBlock Text="{Binding #SliderShx.Value, StringFormat={}{0:F2}}" VerticalAlignment="Center" Width="40" Foreground="#FFFFFF"/>
+                    
+                    <TextBlock Text="shzx (X-Z):" VerticalAlignment="Center" Width="80" Foreground="#FFFFFF" Margin="20,0,0,0"/>
+                    <Slider Name="SliderShzX" Minimum="-2" Maximum="2" Value="0.5" Width="160" Foreground="#FF4500"
+                            PropertyChanged="Slider_PropertyChanged"/>
+                    <TextBlock Text="{Binding #SliderShzX.Value, StringFormat={}{0:F2}}" VerticalAlignment="Center" Foreground="#FFFFFF"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Spacing="10">
+                    <TextBlock Text="shy (Y-X):" VerticalAlignment="Center" Width="80" Foreground="#FFFFFF"/>
+                    <Slider Name="SliderShy" Minimum="-2" Maximum="2" Value="0" Width="160" Foreground="#00D4FF"
+                            PropertyChanged="Slider_PropertyChanged"/>
+                    <TextBlock Text="{Binding #SliderShy.Value, StringFormat={}{0:F2}}" VerticalAlignment="Center" Width="40" Foreground="#FFFFFF"/>
+                    
+                    <TextBlock Text="shzy (Y-Z):" VerticalAlignment="Center" Width="80" Foreground="#FFFFFF" Margin="20,0,0,0"/>
+                    <Slider Name="SliderShzY" Minimum="-2" Maximum="2" Value="0" Width="160" Foreground="#FF4500"
+                            PropertyChanged="Slider_PropertyChanged"/>
+                    <TextBlock Text="{Binding #SliderShzY.Value, StringFormat={}{0:F2}}" VerticalAlignment="Center" Foreground="#FFFFFF"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Spacing="10">
+                    <TextBlock Text="Rot X:" VerticalAlignment="Center" Width="80" Foreground="#FFFFFF"/>
+                    <Slider Name="SliderRotX" Minimum="-180" Maximum="180" Value="-20" Width="160" Foreground="#32CD32"
+                            PropertyChanged="Slider_PropertyChanged"/>
+                    <TextBlock Text="{Binding #SliderRotX.Value, StringFormat={}{0:F0}°}" VerticalAlignment="Center" Width="40" Foreground="#FFFFFF"/>
+                    
+                    <TextBlock Text="Rot Y:" VerticalAlignment="Center" Width="80" Foreground="#FFFFFF" Margin="20,0,0,0"/>
+                    <Slider Name="SliderRotY" Minimum="-180" Maximum="180" Value="30" Width="160" Foreground="#32CD32"
+                            PropertyChanged="Slider_PropertyChanged"/>
+                    <TextBlock Text="{Binding #SliderRotY.Value, StringFormat={}{0:F0}°}" VerticalAlignment="Center" Foreground="#FFFFFF"/>
+                </StackPanel>
+                <TextBlock Name="LblInfo" FontFamily="Consolas" FontSize="11" Foreground="#CCCCCC" Margin="0,5,0,0"/>
+            </StackPanel>
+        </Border>
+        
+        <local:DrawingCanvas Name="MainCanvas" ClipToBounds="True" Background="#1a1a1a" Paint="OnPaint"/>
+    </DockPanel>
+</UserControl>
