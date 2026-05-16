@@ -14,6 +14,9 @@ public partial class Form1 : Form
         AgregarTab("2.3.2 B-Spline",      new TabBSpline());
         AgregarTab("2.4 Fractales",       new TabFractales());
         AgregarTab("2.5 Fuentes",         new TabFuentes());
+        AgregarTab("2.5.8 Final",         new TabFuentes());
+        AgregarTab("4D Rotación - Emmanuel Valenzuela (22540083)", new Tab4D());
+
     }
 
     private void AgregarTab(string titulo, Control contenido)
